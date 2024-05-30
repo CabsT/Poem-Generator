@@ -1,0 +1,75 @@
+body {
+	background-color: #f9f9f9;
+}
+
+h1 {
+	font-size: 64px;
+	font-style: italic;
+	text-align: center;
+	background-image: url("paris.jpg");
+	background-position: center;
+	color: transparent;
+	background-clip: text;
+}
+
+#poem-wrapper {
+	border-radius: 30px;
+	background-image: linear-gradient(
+			rgba(255, 255, 255, 0.7),
+			rgba(255, 255, 255, 0.7)
+		),
+		url("background.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 30px auto;
+	max-width: 900px;
+	aspect-ratio: 16/9;
+}
+#poem-search {
+	display: flex;
+	justify-content: center;
+	padding-top: 50px;
+	border-style: none;
+	gap: 5px;
+}
+
+.search {
+	width: 15vw;
+	line-height: 1.5;
+	border-style: none;
+}
+
+/* Styling for input fields on focus */
+.search:focus {
+	background-color: #fcf3e1;
+	outline: none;
+}
+
+.search::placeholder {
+	color: black;
+	opacity: 0.8;
+}
+
+.search-btn {
+	background-color: #f2dda2;
+	border-style: none;
+	line-height: 2;
+	width: 4vw;
+	cursor: pointer;
+}
+
+.example{
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+footer {
+	text-align: center;
+}
+
+a{
+  color:#596153 ;
+  font-weight: 400;
+}

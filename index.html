@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>AI Poem Genererator</title>
-</head>
-<body>
-  <h1>AI Poem Genererator</h1>
-
-  <footer>This AI project was coded by Charné Teichert and is <a href="https://github.com/CabsT/Poem-Generator" target="_blank"></footer>
-  </a>open-sourced on Github
-  <script src="src/index.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon:ital@0;1&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="src/styles.css" />
+		<title>AI Poem Genererator</title>
+	</head>
+	<body>
+		<header><h1>AI French Poem Genererator</h1></header>
+		<div id="poem-wrapper">
+			<div id="poem-content">
+				<div id="poem-search">
+					<input
+						type="text"
+						placeholder="Enter the topic of your poem"
+						autofocus="on"
+						required
+						class="search"
+					/>
+					<input type="submit" class="search-btn" />
+				</div>
+				<div class="example">i.e: Nature, Love or Beauty</div>
+				<div id="poem"></div>
+			</div>
+		</div>
+		<footer>
+			This AI project was coded by Charné Teichert and is
+			<a href="https://github.com/CabsT/Poem-Generator" target="_blank"
+				>open-sourced on Github
+			</a>
+		</footer>
+		<script src="src/index.js"></script>
+	</body>
 </html>
