@@ -40,9 +40,8 @@ h1 {
 	border-style: none;
 }
 
-/* Styling for input fields on focus */
 .search:focus {
-	background-color: #fcf3e1;
+	background-color: #f7f4ef;
 	outline: none;
 }
 
@@ -55,21 +54,37 @@ h1 {
 	background-color: #f2dda2;
 	border-style: none;
 	line-height: 2;
-	width: 4vw;
+	width: 6vw;
 	cursor: pointer;
 }
 
+.search-btn:hover{
+  background-color:#343c2c;
+}
+
 .example{
+  color:#343c2c;
   display: flex;
   justify-content: center;
   margin-top: 5px;
 }
+#poem {
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  line-height: 2;
+  font-family: "IM Fell French Canon", serif;
+  font-weight: 550;
+  font-style: italic;
+ 
+}
+
 
 footer {
 	text-align: center;
+  font-weight: 400;
 }
 
 a{
-  color:#596153 ;
-  font-weight: 400;
+  color:#343c2c;
 }
