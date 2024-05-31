@@ -12,6 +12,10 @@ h1 {
 	background-clip: text;
 }
 
+h3{
+	margin: 0;
+}
+
 #poem-wrapper {
 	border-radius: 30px;
 	background-image: linear-gradient(
