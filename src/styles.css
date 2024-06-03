@@ -92,3 +92,57 @@ footer {
 a{
   color:#343c2c;
 }
+
+@media(max-width: 820px){
+	h1{
+font-size: 32px;
+	} 
+
+	.search{
+		width: 40vw;
+	}
+	.search::placeholder, .search-btn {
+		font-size: 10px;
+	}
+
+	.search-btn{
+		width: 15vw;
+	}
+	.example{
+		font-size: 12px;
+	}
+	footer{
+		font-size: 12px;
+	}
+
+	#poem{
+		font-size: 16px;
+	}
+}
+
+@media(max-width: 1024px){
+	h1{
+		font-size: 34px;
+			} 
+		
+			.search{
+				width: 40vw;
+			}
+			.search::placeholder, .search-btn {
+				font-size: 14px;
+			}
+		
+			.search-btn{
+				width: 15vw;
+			}
+			.example{
+				font-size: 14px;
+			}
+			footer{
+				font-size: 14px;
+			}
+		
+			#poem{
+				font-size: 18px;
+			}
+}
