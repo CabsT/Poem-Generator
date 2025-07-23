@@ -53,6 +53,7 @@ function generatePoem(event) {
   poemElement.innerHTML = `⏳ Generating a French poem about ${instructionsInput.value}`;
 
   axios.get(apiURL).then(displayPoem);
+  instructionsInput.value = "";
 }
 
 
