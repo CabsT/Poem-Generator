@@ -1,18 +1,43 @@
+function displayPoem(response) {
+  let poem = response.data.answer;
 
-function displayPoem (response){
-  new Typewriter("#poem", {
-    strings: response.data.answer,
-    autoStart: true,
-    delay: 50,
-    pauseFor: 500,
-    cursor: "",
-    deleteSpeed: 0,
-    pauseFor: 10000,
-    
+  // Clean up accidental trailing backticks or extra markdown
+  poem = poem.replace(/```+$/g, "").trim();
+
+
+  let tempDiv = document.createElement("div");
+  tempDiv.innerHTML = poem;
+
+  let lines = [];
+  let title = tempDiv.querySelector("h3");
+  if (title) lines.push(title.outerHTML);
+
+  let rawLines = tempDiv.innerHTML.split("<br>");
+  rawLines.forEach(line => {
+    if (!line.includes("<h3>") && line.trim()) {
+      lines.push(line.trim());
+    }
   });
 
+  let typewriter = new Typewriter("#poem", {
+    autoStart: true,
+    delay: 50,
+    cursor: "",
+    deleteSpeed: 0,
+    parseHTML: true,
+  });
 
+  lines.forEach((line, index) => {
+    typewriter.typeString(line);
+    if (index !== lines.length - 1) {
+      typewriter.typeString("<br>");
+    }
+  });
+
+  typewriter.start();
 }
+
+
 
 function generatePoem(event) {
   event.preventDefault();
@@ -25,7 +50,7 @@ function generatePoem(event) {
   let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
   let poemElement = document.querySelector("#poem");
-  poemElement.innerHTML = `<div class="generating">⏳ Generating a French poem about ${instructionsInput.value}</div>`;
+  poemElement.innerHTML = `⏳ Generating a French poem about ${instructionsInput.value}`;
 
   axios.get(apiURL).then(displayPoem);
 }
